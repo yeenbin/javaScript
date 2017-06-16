@@ -54,3 +54,18 @@ getAge.apply(xiaoming2,[]);
 //对普通函数调用，我们通常把this绑定为null
 var max1 = Math.max.apply(null,[3,4,5]);
 var max2 = Math.max.call(null,3,4,5);
+
+//假定要统计一下代码一共调用了多少次parseInt()方法
+var count = 0;
+var oldParseInt = parseInt;//保存原方法
+//重写系统的
+window.parseInt = function () {
+    count += 1;
+    return oldParseInt.apply(null,arguments);
+}
+
+parseInt('10');
+parseInt('20');
+parseInt('30');
+
+console.log(count);
