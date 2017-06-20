@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作文件</title>
+</head>
+<body>
+<!--注意：当一个表单包含<input type="file">时，表单的enctype必须指定为multipart/form-data，method必须指定为post，浏览器才能正确编码并以multipart/form-data格式发送表单的数据。出于安全考虑，浏览器只允许用户点击<input type="file">来选择本地文件，用JavaScript对<input type="file">的value赋值是没有任何效果的。当用户选择了上传某个文件后，JavaScript也无法获得该文件的真实路径
+-->
+
+<form enctype="multipart/form-data" onsubmit="return checkFile()">
+    <input id="test-file-upload" type="file">
+    <input type="submit" value="提交">
+</form>
+
+<p id="test-promise2-log">
+
+</p>
+
+<script src="28.操作文件.js">
+
+</script>
+
+<script src="29.AJAX.js">
+
+</script>
+
+</body>
+</html>

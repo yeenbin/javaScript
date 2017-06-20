@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试网页</title>
+
+</head>
+<body>
+
+<dl id="drink-menu" style="border:solid 1px #ccc;padding:6px;">
+    <dt>摩卡</dt>
+    <dd>热摩卡咖啡</dd>
+    <dt>酸奶</dt>
+    <dd>北京老酸奶</dd>
+    <dt>果汁</dt>
+    <dd>鲜榨苹果汁</dd>
+</dl>
+
+
+<p id="p-id">...</p>
+
+
+<script src = 25.浏览器对象.js>
+
+</script>
+<script src = 26.操作DOM.js>
+
+</script>
+
+
+<!--注意到id为md5-password的<input>标记了name="password"，而用户输入的id为input-password的<input>没有name属性。没有name属性的<input>的数据不会被提交。-->
+<form id="login-form" method="post" onsubmit="return checkForm()">
+    <input type="text" id="username" name="username">
+    <input type="password" id="input-password">
+    <input type="hidden" id="md5-password" name="password">
+    <button type="submit">Submit</button>
+</form>
+
+<script src = "27.操作表单.js">
+
+</script>
+
+</body>
+</html>
